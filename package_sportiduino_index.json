@@ -1,0 +1,39 @@
+{
+  "packages": [
+    {
+      "name": "Sportiduino",
+      "maintainer": "Semyon Yakimov",
+      "email": "sdyakimov@gmail.com",
+      "websiteURL": "https://github.com/sportiduino/sportiduino",
+      "help": {
+        "online": "https://github.com/sportiduino/sportiduino/"
+      },
+      "platforms": [
+        {
+          "name": "Sportiduino boards",
+          "architecture": "avr",
+          "version": "1.0.0",
+          "category": "Contributed",
+          "url": "https://github.com/sportiduino/BoardsManagerFiles/raw/master/packages/sportiduino_boards-1.0.0.tar.bz2",
+          "archiveFileName": "sportiduino_boards-1.0.0.tar.bz2",
+          "checksum": "SHA-256:e051fa62da87e0869a79b93d66474e00c57acf0d20d35082fda440752984a0e4",
+          "size": "2835",
+          "boards": [{ "name": "Sportiduino Base Station" }, { "name": "Arduino Nano (without reset)" }],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.8.1-arduino5"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            }
+          ]
+        }
+      ],
+      "tools": []
+    }
+  ]
+}

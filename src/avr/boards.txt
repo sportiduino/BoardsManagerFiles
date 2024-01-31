@@ -1,0 +1,64 @@
+##############################################################
+
+sportiduino_bs.name=Sportiduino Base Station
+
+sportiduino_bs.build.mcu=atmega328p
+sportiduino_bs.build.f_cpu=8000000L
+sportiduino_bs.build.board=AVR_SPORTIDUINO
+sportiduino_bs.build.core=arduino
+sportiduino_bs.build.variant=standard
+
+sportiduino_bs.upload.tool=avrdude
+sportiduino_bs.upload.protocol=arduino
+sportiduino_bs.upload.maximum_size=32256
+sportiduino_bs.upload.maximum_data_size=2048
+sportiduino_bs.upload.speed=38400
+
+sportiduino_bs.bootloader.tool=avrdude
+sportiduino_bs.bootloader.low_fuses=0xE2
+sportiduino_bs.bootloader.high_fuses=0xDE
+sportiduino_bs.bootloader.extended_fuses=0xFF
+sportiduino_bs.bootloader.unlock_bits=0x3F
+sportiduino_bs.bootloader.lock_bits=0x0F
+
+#menu.bootloader=Bootloader
+
+sportiduino_bs.menu.bootloader.optiboot=Optiboot 38400
+sportiduino_bs.menu.bootloader.optiboot.bootloader.file=optiboot/optiboot8_38400_sportiduino.hex
+
+sportiduino_bs.menu.bootloader.optiboot_led=Optiboot 38400 with LED
+sportiduino_bs.menu.bootloader.optiboot_led.bootloader.file=optiboot/optiboot8_38400_sportiduino_led.hex
+
+############################################################## 
+
+nano.name=Arduino Nano
+
+nano.upload.tool=avrdude
+nano.upload.protocol=arduino
+
+nano.bootloader.tool=avrdude
+nano.bootloader.unlock_bits=0x3F
+nano.bootloader.lock_bits=0x0F
+
+nano.build.f_cpu=16000000L
+nano.build.board=AVR_NANO
+nano.build.core=arduino
+nano.build.variant=eightanaloginputs
+
+## Arduino Nano w/ ATmega328P (without reset)
+## --------------------------
+nano.menu.cpu.atmega328noreset=ATmega328P (without reset)
+
+nano.menu.cpu.atmega328noreset.upload.maximum_size=30720
+nano.menu.cpu.atmega328noreset.upload.maximum_data_size=2048
+nano.menu.cpu.atmega328noreset.upload.speed=38400
+
+nano.menu.cpu.atmega328noreset.bootloader.low_fuses=0xFF
+nano.menu.cpu.atmega328noreset.bootloader.high_fuses=0xDA
+nano.menu.cpu.atmega328noreset.bootloader.extended_fuses=0xFD
+nano.menu.cpu.atmega328noreset.bootloader.file=optiboot/optiboot8_atmega328_38400_without_reset.hex
+
+nano.menu.cpu.atmega328noreset.build.mcu=atmega328p
+
+############################################################## 
+
