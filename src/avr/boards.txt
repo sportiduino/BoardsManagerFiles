@@ -1,27 +1,31 @@
+menu.bootloader=Bootloader
+menu.pcbv=PCB version
+menu.buzzfreq=Buzzer frequency
+menu.checkbattery=Check battery in sleep
+menu.debug=Debug mode
+
 ##############################################################
 
 sportiduino_bs.name=Sportiduino Base Station
 
 sportiduino_bs.build.mcu=atmega328p
 sportiduino_bs.build.f_cpu=8000000L
-sportiduino_bs.build.board=AVR_SPORTIDUINO
-sportiduino_bs.build.core=arduino
-sportiduino_bs.build.variant=standard
+sportiduino_bs.build.board=AVR_SPORTIDUINO_BS
+sportiduino_bs.build.core=arduino:arduino
+sportiduino_bs.build.variant=arduino:standard
 
-sportiduino_bs.upload.tool=avrdude
+sportiduino_bs.upload.tool=arduino:avrdude
 sportiduino_bs.upload.protocol=arduino
 sportiduino_bs.upload.maximum_size=32256
 sportiduino_bs.upload.maximum_data_size=2048
 sportiduino_bs.upload.speed=38400
 
-sportiduino_bs.bootloader.tool=avrdude
+sportiduino_bs.bootloader.tool=arduino:avrdude
 sportiduino_bs.bootloader.low_fuses=0xE2
 sportiduino_bs.bootloader.high_fuses=0xDE
 sportiduino_bs.bootloader.extended_fuses=0xFF
 sportiduino_bs.bootloader.unlock_bits=0x3F
 sportiduino_bs.bootloader.lock_bits=0x0F
-
-menu.bootloader=Bootloader
 
 sportiduino_bs.menu.bootloader.optiboot=Optiboot 38400
 sportiduino_bs.menu.bootloader.optiboot.bootloader.file=optiboot/optiboot8_38400_sportiduino.hex
@@ -29,36 +33,52 @@ sportiduino_bs.menu.bootloader.optiboot.bootloader.file=optiboot/optiboot8_38400
 sportiduino_bs.menu.bootloader.optiboot_led=Optiboot 38400 with LED
 sportiduino_bs.menu.bootloader.optiboot_led.bootloader.file=optiboot/optiboot8_38400_sportiduino_led.hex
 
+sportiduino_bs.menu.pcbv.default=3
+sportiduino_bs.menu.pcbv.default.build.opts.pcbv=3
+sportiduino_bs.menu.pcbv.second=2
+sportiduino_bs.menu.pcbv.second.build.opts.pcbv=2
+sportiduino_bs.menu.pcbv.first=1
+sportiduino_bs.menu.pcbv.first.build.opts.pcbv=1
+
+sportiduino_bs.menu.buzzfreq.default=4 kHz
+sportiduino_bs.menu.buzzfreq.default.build.opts.buzzfreq=4000
+sportiduino_bs.menu.buzzfreq.zero=0 kHz (active buzzer)
+sportiduino_bs.menu.buzzfreq.zero.build.opts.buzzfreq=0
+
+sportiduino_bs.menu.checkbattery.no=No
+sportiduino_bs.menu.checkbattery.no.build.opts.checkbattery=
+sportiduino_bs.menu.checkbattery.yes=Yes
+sportiduino_bs.menu.checkbattery.yes.build.opts.checkbattery=-DCHECK_BATTERY_IN_SLEEP
+
+sportiduino_bs.menu.debug.no=No
+sportiduino_bs.menu.debug.no.build.opts.debug=
+sportiduino_bs.menu.debug.enable=Enable debug LED flashing
+sportiduino_bs.menu.debug.enable.build.opts.debug=-DDEBUG
+
 ############################################################## 
 
-nano.name=Arduino Nano
+sportiduino_ms_nano.name=Arduino Nano (without reset)
 
-nano.upload.tool=avrdude
-nano.upload.protocol=arduino
+sportiduino_ms_nano.build.mcu=atmega328p
+sportiduino_ms_nano.build.f_cpu=16000000L
+sportiduino_ms_nano.build.board=AVR_NANO
+sportiduino_ms_nano.build.core=arduino:arduino
+sportiduino_ms_nano.build.variant=arduino:eightanaloginputs
 
-nano.bootloader.tool=avrdude
-nano.bootloader.unlock_bits=0x3F
-nano.bootloader.lock_bits=0x0F
+sportiduino_ms_nano.upload.tool=arduino:avrdude
+sportiduino_ms_nano.upload.protocol=arduino
+sportiduino_ms_nano.upload.maximum_size=30720
+sportiduino_ms_nano.upload.maximum_data_size=2048
+sportiduino_ms_nano.upload.speed=38400
 
-nano.build.f_cpu=16000000L
-nano.build.board=AVR_NANO
-nano.build.core=arduino
-nano.build.variant=eightanaloginputs
+sportiduino_ms_nano.bootloader.tool=arduino:avrdude
+sportiduino_ms_nano.bootloader.low_fuses=0xFF
+sportiduino_ms_nano.bootloader.high_fuses=0xDA
+sportiduino_ms_nano.bootloader.extended_fuses=0xFD
+sportiduino_ms_nano.bootloader.unlock_bits=0x3F
+sportiduino_ms_nano.bootloader.lock_bits=0x0F
+sportiduino_ms_nano.bootloader.file=optiboot/optiboot8_atmega328_38400_without_reset.hex
 
-## Arduino Nano w/ ATmega328P (without reset)
-## --------------------------
-nano.menu.cpu.atmega328noreset=ATmega328P (without reset)
-
-nano.menu.cpu.atmega328noreset.upload.maximum_size=30720
-nano.menu.cpu.atmega328noreset.upload.maximum_data_size=2048
-nano.menu.cpu.atmega328noreset.upload.speed=38400
-
-nano.menu.cpu.atmega328noreset.bootloader.low_fuses=0xFF
-nano.menu.cpu.atmega328noreset.bootloader.high_fuses=0xDA
-nano.menu.cpu.atmega328noreset.bootloader.extended_fuses=0xFD
-nano.menu.cpu.atmega328noreset.bootloader.file=optiboot/optiboot8_atmega328_38400_without_reset.hex
-
-nano.menu.cpu.atmega328noreset.build.mcu=atmega328p
 
 ############################################################## 
 

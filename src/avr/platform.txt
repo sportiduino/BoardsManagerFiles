@@ -1,0 +1,5 @@
+name=Sportiduino Boards
+version=1.0.0
+
+build.extra_flags=-DHW_VERS={build.opts.pcbv} -DBUZZER_FREQUENCY={build.opts.buzzfreq} {build.opts.checkbattery} {build.opts.debug}
+
