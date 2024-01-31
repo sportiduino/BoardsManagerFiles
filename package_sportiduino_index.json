@@ -16,8 +16,8 @@
           "category": "Contributed",
           "url": "https://github.com/sportiduino/BoardsManagerFiles/raw/master/packages/sportiduino_boards-1.0.0.tar.bz2",
           "archiveFileName": "sportiduino_boards-1.0.0.tar.bz2",
-          "checksum": "SHA-256:7d1ffb0eedef4b3876a9791caead098b45500e3027d428dea5c2196299cfd972",
-          "size": "3883",
+          "checksum": "SHA-256:27a345502c01d5ebd7978d3826c22c32f2bb7159f3eab2f74439836db80588ea",
+          "size": "3195",
           "boards": [{ "name": "Sportiduino Base Station" }, { "name": "Arduino Nano (without reset)" }],
           "toolsDependencies": []
         }

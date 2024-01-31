@@ -12,7 +12,7 @@ get_first_word() {
     echo "$1" | awk '{print $1}'
 }
 
-tar --exclude=.git --exclude=.gitignore -cjf "${PACKAGE_PATH}" -C src avr
+tar --exclude=.git --exclude=.gitignore --exclude=*.swp -cjf "${PACKAGE_PATH}" -C src avr
 PACKAGE_SIZE=$(get_first_word $(wc -c "${PACKAGE_PATH}"))
 PACKAGE_CHECKSUM=$(get_first_word $(sha256sum "${PACKAGE_PATH}"))
 
