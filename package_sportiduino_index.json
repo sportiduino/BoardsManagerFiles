@@ -19,7 +19,18 @@
           "checksum": "SHA-256:e051fa62da87e0869a79b93d66474e00c57acf0d20d35082fda440752984a0e4",
           "size": "2835",
           "boards": [{ "name": "Sportiduino Base Station" }, { "name": "Arduino Nano (without reset)" }],
-          "toolsDependencies": []
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.8.1-arduino5"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            }
+          ]
         }
       ],
       "tools": []

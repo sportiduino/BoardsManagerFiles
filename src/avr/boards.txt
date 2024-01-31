@@ -21,7 +21,7 @@ sportiduino_bs.bootloader.extended_fuses=0xFF
 sportiduino_bs.bootloader.unlock_bits=0x3F
 sportiduino_bs.bootloader.lock_bits=0x0F
 
-#menu.bootloader=Bootloader
+menu.bootloader=Bootloader
 
 sportiduino_bs.menu.bootloader.optiboot=Optiboot 38400
 sportiduino_bs.menu.bootloader.optiboot.bootloader.file=optiboot/optiboot8_38400_sportiduino.hex
