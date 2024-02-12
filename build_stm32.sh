@@ -26,27 +26,6 @@ echo "{
   \"checksum\": \"SHA-256:${PACKAGE_CHECKSUM}\",
   \"size\": \"${PACKAGE_SIZE}\",
   \"boards\": [{ \"name\": \"SportiduinoV4 Base Station\" }],
-  \"toolsDependencies\": [
-    {
-      \"packager\": \"STMicroelectronics\",
-      \"name\": \"xpack-arm-none-eabi-gcc\",
-      \"version\": \"12.2.1-1.2\"
-    },
-    {
-      \"packager\": \"STMicroelectronics\",
-      \"name\": \"xpack-openocd\",
-      \"version\": \"0.12.0-1\"
-    },
-    {
-      \"packager\": \"STMicroelectronics\",
-      \"name\": \"STM32Tools\",
-      \"version\": \"2.2.1\"
-    },
-    {
-      \"packager\": \"STMicroelectronics\",
-      \"name\": \"CMSIS\",
-      \"version\": \"5.9.0\"
-    }
-  ]
+  \"toolsDependencies\": []
 }"
 

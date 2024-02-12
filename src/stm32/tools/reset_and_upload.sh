@@ -2,26 +2,28 @@
 
 set -e
 
-if [ $# -lt 2 ]; then
-  echo "Usage: $0 <dummy_port> <binfile>" >&2
+if [ $# -lt 3 ]; then
+  echo "Usage: $0 <dfu_util> <dummy_port> <binfile>" >&2
   exit 1
 fi
-dummy_port_fullpath="/dev/$1"
-binfile="$2"
+
+dfu_util="$1"
+dummy_port_fullpath="/dev/$2"
+binfile="$3"
 
 # Get the directory where the script is running.
 DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
 if [ -e "${dummy_port_fullpath}" ]; then
   echo "Reset device to bootloader" >&2
-  "python3 ${DIR}/reset_to_bootloader.py" "${dummy_port_fullpath}"
+  "${DIR}/reset_to_bootloader.py" "${dummy_port_fullpath}"
+  sleep 2
 else
   echo "${dummy_port_fullpath} doesn't exists" >&2
   echo "Trying upload firmware without reset" >&2
 fi
-sleep 1
 
-"dfu-util" -D "${binfile}" -R
+"${dfu_util}" -D "${binfile}"
 
 #COUNTER=3
 #while
