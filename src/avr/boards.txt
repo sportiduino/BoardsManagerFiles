@@ -18,7 +18,6 @@ sportiduino_bs.upload.tool=arduino:avrdude
 sportiduino_bs.upload.protocol=arduino
 sportiduino_bs.upload.maximum_size=32256
 sportiduino_bs.upload.maximum_data_size=2048
-sportiduino_bs.upload.speed=38400
 
 sportiduino_bs.bootloader.tool=arduino:avrdude
 sportiduino_bs.bootloader.low_fuses=0xE2
@@ -29,9 +28,15 @@ sportiduino_bs.bootloader.lock_bits=0x0F
 
 sportiduino_bs.menu.bootloader.optiboot=Optiboot 38400
 sportiduino_bs.menu.bootloader.optiboot.bootloader.file=optiboot/optiboot8_38400_sportiduino.hex
+sportiduino_bs.menu.bootloader.optiboot.upload.speed=38400
 
 sportiduino_bs.menu.bootloader.optiboot_led=Optiboot 38400 with LED
 sportiduino_bs.menu.bootloader.optiboot_led.bootloader.file=optiboot/optiboot8_38400_sportiduino_led.hex
+sportiduino_bs.menu.bootloader.optiboot_led.upload.speed=38400
+
+sportiduino_bs.menu.bootloader.optiboot_19200_led=Optiboot 19200 with LED
+sportiduino_bs.menu.bootloader.optiboot_19200_led.bootloader.file=optiboot/optiboot8_19200_sportiduino_led.hex
+sportiduino_bs.menu.bootloader.optiboot_19200_led.upload.speed=19200
 
 sportiduino_bs.menu.pcbv.default=3
 sportiduino_bs.menu.pcbv.default.build.opts.pcbv=3
