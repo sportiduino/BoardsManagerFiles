@@ -30,6 +30,8 @@
           "archiveFileName": "sportiduino_boards-1.1.0.tar.bz2",
           "checksum": "SHA-256:cda82c852140b9c82af76d10d2a11174542c55f8e2c84e3c9cabbecdea8e4392",
           "size": "3225",
+          "boards": [{ "name": "Sportiduino Base Station" }, { "name": "Arduino Nano (without reset)" }],
+          "toolsDependencies": []
         }
       ],
       "tools": []
