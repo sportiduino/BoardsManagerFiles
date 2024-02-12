@@ -1,0 +1,62 @@
+# See: https://arduino.github.io/arduino-cli/latest/platform-specification/
+
+menu.opt=Optimize
+menu.dbg=Debug symbols and core logs
+menu.rtlib=C Runtime Library
+menu.upload_method=Upload method
+
+sportiduino4.name=SportiduinoV4 Base Station
+sportiduino4.build.core=arduino
+sportiduino4.build.board=SPORTIDUINO_STM32L151C8TX
+sportiduino4.build.mcu=cortex-m3
+sportiduino4.build.series=STM32L1xx
+sportiduino4.build.cmsis_lib_gcc=arm_cortexM3l_math
+sportiduino4.build.product_line=STM32L151xB
+sportiduino4.upload.maximum_size=65536
+sportiduino4.upload.maximum_data_size=32768
+sportiduino4.upload.protocol=dfu
+sportiduino4.upload.tool=dfu_util
+sportiduino4.build.flash_offset=0x2000
+sportiduino4.build.bootloader_flags=-DVECT_TAB_OFFSET={build.flash_offset}
+sportiduino4.build.variant=STM32L1xx/L100C6Ux(A)_L151C(6-8-B)(T-U)x(A)_L152C(6-8-B)(T-U)x(A)
+sportiduino4.build.variant_h=variant_generic.h
+sportiduino4.build.st_extra_flags=-D{build.product_line} {build.usb_flags} -DUSBD_USE_CDC -DUSBD_FIXED_PULLUP -DDISABLE_GENERIC_SERIALUSB -DHAL_UART_MODULE_ENABLED {build.bootloader_flags}
+
+sportiduino4.menu.opt.osstd=Smallest (-Os default)
+sportiduino4.menu.opt.oslto=Smallest (-Os) with LTO
+sportiduino4.menu.opt.oslto.build.flags.optimize=-Os -flto
+sportiduino4.menu.opt.o1std=Fast (-O1)
+sportiduino4.menu.opt.o1std.build.flags.optimize=-O1
+sportiduino4.menu.opt.o1lto=Fast (-O1) with LTO
+sportiduino4.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+sportiduino4.menu.opt.o2std=Faster (-O2)
+sportiduino4.menu.opt.o2std.build.flags.optimize=-O2
+sportiduino4.menu.opt.o2lto=Faster (-O2) with LTO
+sportiduino4.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+sportiduino4.menu.opt.o3std=Fastest (-O3)
+sportiduino4.menu.opt.o3std.build.flags.optimize=-O3
+sportiduino4.menu.opt.o3lto=Fastest (-O3) with LTO
+sportiduino4.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+sportiduino4.menu.opt.ogstd=Debug (-Og)
+sportiduino4.menu.opt.ogstd.build.flags.optimize=-Og
+sportiduino4.menu.opt.o0std=No Optimization (-O0)
+sportiduino4.menu.opt.o0std.build.flags.optimize=-O0
+
+sportiduino4.menu.dbg.none=None
+sportiduino4.menu.dbg.enable_sym=Symbols Enabled (-g)
+sportiduino4.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
+sportiduino4.menu.dbg.enable_log=Core logs Enabled
+sportiduino4.menu.dbg.enable_log.build.flags.debug=
+sportiduino4.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
+sportiduino4.menu.dbg.enable_all.build.flags.debug=-g
+
+sportiduino4.menu.rtlib.nano=Newlib Nano (default)
+sportiduino4.menu.rtlib.nanofp=Newlib Nano + Float Printf
+sportiduino4.menu.rtlib.nanofp.build.flags.ldspecs=--specs=nano.specs -u _printf_float
+sportiduino4.menu.rtlib.nanofs=Newlib Nano + Float Scanf
+sportiduino4.menu.rtlib.nanofs.build.flags.ldspecs=--specs=nano.specs -u _scanf_float
+sportiduino4.menu.rtlib.nanofps=Newlib Nano + Float Printf/Scanf
+sportiduino4.menu.rtlib.nanofps.build.flags.ldspecs=--specs=nano.specs -u _printf_float -u _scanf_float
+sportiduino4.menu.rtlib.full=Newlib Standard
+sportiduino4.menu.rtlib.full.build.flags.ldspecs=
+

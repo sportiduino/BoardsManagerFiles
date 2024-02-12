@@ -32,6 +32,39 @@
           "size": "3225",
           "boards": [{ "name": "Sportiduino Base Station" }, { "name": "Arduino Nano (without reset)" }],
           "toolsDependencies": []
+        },
+        {
+          "name": "Sportiduino STM32 boards",
+          "architecture": "stm32",
+          "version": "1.0.0",
+          "category": "Contributed",
+          "url": "https://github.com/sportiduino/BoardsManagerFiles/raw/stm32/packages/sportiduino_stm32_boards-1.0.0.tar.bz2",
+          "archiveFileName": "sportiduino_stm32_boards-1.0.0.tar.bz2",
+          "checksum": "SHA-256:d06279f19687415e54a6da6abfc1fcefc1efe9579d04872f9a54d19273baabcd",
+          "size": "4334",
+          "boards": [{ "name": "SportiduinoV4 Base Station" }],
+          "toolsDependencies": [
+            {
+              "packager": "STMicroelectronics",
+              "name": "xpack-arm-none-eabi-gcc",
+              "version": "12.2.1-1.2"
+            },
+            {
+              "packager": "STMicroelectronics",
+              "name": "xpack-openocd",
+              "version": "0.12.0-1"
+            },
+            {
+              "packager": "STMicroelectronics",
+              "name": "STM32Tools",
+              "version": "2.2.1"
+            },
+            {
+              "packager": "STMicroelectronics",
+              "name": "CMSIS",
+              "version": "5.9.0"
+            }
+          ]
         }
       ],
       "tools": []
