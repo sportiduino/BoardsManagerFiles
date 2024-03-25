@@ -1,5 +1,11 @@
 name=Sportiduino Boards
 version=1.0.0
 
+# These can be overridden in boards.txt
+build.opts.pcbv=1
+build.opts.buzzfreq=4000
+build.opts.checkbattery=
+build.opts.debug=
+
 build.extra_flags=-DHW_VERS={build.opts.pcbv} -DBUZZER_FREQUENCY={build.opts.buzzfreq} {build.opts.checkbattery} {build.opts.debug}
 

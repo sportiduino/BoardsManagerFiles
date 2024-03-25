@@ -62,7 +62,7 @@ sportiduino_bs.menu.debug.enable.build.opts.debug=-DDEBUG
 
 ############################################################## 
 
-sportiduino_ms_nano.name=Arduino Nano (without reset)
+sportiduino_ms_nano.name=Sportiduino Master Station (Arduino Nano)
 
 sportiduino_ms_nano.build.mcu=atmega328p
 sportiduino_ms_nano.build.f_cpu=16000000L
@@ -84,6 +84,10 @@ sportiduino_ms_nano.bootloader.unlock_bits=0x3F
 sportiduino_ms_nano.bootloader.lock_bits=0x0F
 sportiduino_ms_nano.bootloader.file=optiboot/optiboot8_atmega328_38400_without_reset.hex
 
+sportiduino_ms_nano.menu.buzzfreq.default=4 kHz
+sportiduino_ms_nano.menu.buzzfreq.default.build.opts.buzzfreq=4000
+sportiduino_ms_nano.menu.buzzfreq.zero=0 kHz (active buzzer)
+sportiduino_ms_nano.menu.buzzfreq.zero.build.opts.buzzfreq=0
 
 ############################################################## 
 
