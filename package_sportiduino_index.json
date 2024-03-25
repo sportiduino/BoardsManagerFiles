@@ -32,6 +32,18 @@
           "size": "3225",
           "boards": [{ "name": "Sportiduino Base Station" }, { "name": "Arduino Nano (without reset)" }],
           "toolsDependencies": []
+        },
+        {
+          "name": "Sportiduino boards",
+          "architecture": "avr",
+          "version": "1.2.0",
+          "category": "Contributed",
+          "url": "https://github.com/sportiduino/BoardsManagerFiles/raw/master/packages/sportiduino_boards-1.2.0.tar.bz2",
+          "archiveFileName": "sportiduino_boards-1.2.0.tar.bz2",
+          "checksum": "SHA-256:e6b769abf2f7a8a09d63a9db01c7c2e916c747da75d02b9d5a6644b75b3a6128",
+          "size": "3308",
+          "boards": [{ "name": "Sportiduino Base Station" }, { "name": "Sportiduino Master Station (Arduino Nano)" }],
+          "toolsDependencies": []
         }
       ],
       "tools": []
