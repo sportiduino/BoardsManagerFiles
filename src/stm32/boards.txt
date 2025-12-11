@@ -1,6 +1,7 @@
 # See: https://arduino.github.io/arduino-cli/latest/platform-specification/
 
 menu.opt=Optimize
+menu.debug=Debug mode
 menu.dbg=Debug symbols and core logs
 menu.rtlib=C Runtime Library
 menu.upload_method=Upload method
@@ -21,6 +22,11 @@ sportiduino4.build.bootloader_flags=-DVECT_TAB_OFFSET={build.flash_offset}
 sportiduino4.build.variant=STMicroelectronics:STM32L1xx/L100C6Ux(A)_L151C(6-8-B)(T-U)x(A)_L152C(6-8-B)(T-U)x(A)
 sportiduino4.build.variant_h=variant_generic.h
 sportiduino4.build.st_extra_flags=-D{build.product_line} {build.usb_flags} -DUSBD_USE_CDC -DUSBD_FIXED_PULLUP -DDISABLE_GENERIC_SERIALUSB -DHAL_UART_MODULE_ENABLED {build.bootloader_flags}
+
+sportiduino4.menu.debug.no=No
+sportiduino4.menu.debug.no.build.opts.debug=
+sportiduino4.menu.debug.enable=Enable debug LED flashing and serial messages
+sportiduino4.menu.debug.enable.build.opts.debug=-DDEBUG_MSGS
 
 sportiduino4.menu.opt.oslto=Smallest (-Os) with LTO
 sportiduino4.menu.opt.oslto.build.flags.optimize=-Os -flto

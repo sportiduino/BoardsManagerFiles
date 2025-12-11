@@ -160,3 +160,8 @@ tools.dfu_util.upload.params.verbose=-v
 tools.dfu_util.upload.params.quiet=
 tools.dfu_util.upload.pattern="{path}/{cmd}" {runtime.tools.STM32Tools.path}/dfu-util.sh {serial.port.file} "{build.path}/{build.project_name}.bin"
 
+# These can be overridden in boards.txt
+build.opts.debug=
+
+build.extra_flags={build.opts.debug}
+
